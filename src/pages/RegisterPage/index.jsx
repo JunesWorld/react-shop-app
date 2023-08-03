@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import SignUp from './sign-up/SignUp'
 
 const RegisterPage = () => {
   return (

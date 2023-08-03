@@ -22,3 +22,5 @@ https://console.firebase.google.com/?hl=ko
   - 앱 등록
   - `npm install firebase`
 - src/firbase.js 파일 생성
+- build/authentication/시작하기
+  - 이메일/비밀번호/사용설정 click
