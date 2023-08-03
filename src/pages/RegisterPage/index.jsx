@@ -2,7 +2,15 @@ import React from 'react'
 
 const RegisterPage = () => {
   return (
-    <div>RegisterPage</div>
+    <div className='page'>
+      <div className='form_container'>
+        <h1>회원가입</h1>
+        <SignUp />
+        <p>
+          이미 계정이 있습니까?<Link to={"/login"}>로그인</Link>
+        </p>
+      </div>
+    </div>
   )
 }
 
