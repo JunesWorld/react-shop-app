@@ -5,6 +5,7 @@ import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth'
 import app from '../../../firebase'
 import { useDispatch } from 'react-redux'
 import { setUsers } from '../../../store/user/user.slice'
+import { setUserId } from '../../../store/cart/cart.slice'
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -24,6 +25,7 @@ const SignUp = () => {
         token: userCredential.user.refreshToken,
         id: userCredential.user.uid
       }))
+      dispatch(setUserId(userCredential.user.uid))
       // Home page로 이동
       navigate('/');
     })
