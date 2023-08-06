@@ -15,7 +15,7 @@ const Nav = () => {
   const { isAuth } = useAuth()
   const dispatch = useDispatch()
   const auth = getAuth(app)
-  const { products } useAppSelector((state) => state.cartSlice)
+  const { products } = useAppSelector((state) => state.cartSlice)
 
   const handleSignOut = () => {
     signOut(auth)
