@@ -3,7 +3,7 @@ import { useAppSelector, useAppDispatch } from '../../../hooks/redux';
 import styles from './Checkout.module.scss'
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../../hooks/useAuth';
-import { getTotalPrice } from '../../../store/cart/cart.slice';
+import { getTotalPrice, postOrder } from '../../../store/cart/cart.slice';
 
 const Checkout = () => {
 
@@ -15,6 +15,10 @@ const Checkout = () => {
 }, [cart])
 
   const { isAuth } = useAuth();
+
+  const sendOrder = () => {
+    dispatch(postOrder(cart))
+  }
 
   return (
     <div className={styles.checkout}>
