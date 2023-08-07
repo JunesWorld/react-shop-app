@@ -30,3 +30,32 @@ https://console.firebase.google.com/?hl=ko
 ```bash
 npm i react-redux
 ```
+
+## Typescript로 전환
+
+```bash
+npm i -D typescript @types/react @types/react-dom
+```
+
+- vite.config.js => vite.config.ts
+- ts-test 폴더 만들기
+  - npm init vite
+    - ./ -> react -> Typescript 
+    - tsconfig.json & tsconfig.node.json 파일 복사/붙여넣기
+    - vite-env.d.ts : src 폴더 안으로 복붙
+- main.jsx => main.tsx
+  ```js
+  ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  )
+  ```
+  tsconfig.json
+  ```js
+  "allowJs": true
+  ```
+  index.html
+  ```html
+  <script type="module" src="/src/main.tsx"></script>
+  ```
